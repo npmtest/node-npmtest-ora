@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-ora/ora/index.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-ora/node_modules/ora/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-ora">npmtest-ora (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-ora/ora/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-ora/node_modules/ora/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">8.96% <small>(6 / 67)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-ora/ora/</a> &#187; index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-ora/node_modules/ora/</a> » index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -503,145 +501,146 @@ const cliSpinners = require('cli-spinners');
 const logSymbols = require('log-symbols');
 &nbsp;
 class Ora {
-	constructor<span class="fstat-no" title="function not covered" >(options) {</span>
-<span class="cstat-no" title="statement not covered" >		if (typeof options === 'string') {</span>
-<span class="cstat-no" title="statement not covered" >			options = {</span>
+	constructor<span class="fstat-no" title="function not covered">(options) {</span>
+<span class="cstat-no" title="statement not covered">		if (typeof options === 'string') {</span>
+<span class="cstat-no" title="statement not covered">			options = {</span>
 				text: options
 			};
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		this.options = Object.assign({</span>
+<span class="cstat-no" title="statement not covered">		this.options = Object.assign({</span>
 			text: '',
 			color: 'cyan',
 			stream: process.stderr
 		}, options);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		const sp = this.options.spinner;</span>
-<span class="cstat-no" title="statement not covered" >		this.spinner = typeof sp === 'object' ? sp : (process.platform === 'win32' ? cliSpinners.line : (cliSpinners[sp] || cliSpinners.dots)); </span>// eslint-disable-line no-nested-ternary
+<span class="cstat-no" title="statement not covered">		const sp = this.options.spinner;</span>
+<span class="cstat-no" title="statement not covered">		this.spinner = typeof sp === 'object' ? sp : (process.platform === 'win32' ? cliSpinners.line : (cliSpinners[sp] || cliSpinners.dots)); </span>// eslint-disable-line no-nested-ternary
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (this.spinner.frames === undefined) {</span>
-<span class="cstat-no" title="statement not covered" >			throw new Error('Spinner must define `frames`');</span>
+<span class="cstat-no" title="statement not covered">		if (this.spinner.frames === undefined) {</span>
+<span class="cstat-no" title="statement not covered">			throw new Error('Spinner must define `frames`');</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		this.text = this.options.text;</span>
-<span class="cstat-no" title="statement not covered" >		this.color = this.options.color;</span>
-<span class="cstat-no" title="statement not covered" >		this.interval = this.options.interval || this.spinner.interval || 100;</span>
-<span class="cstat-no" title="statement not covered" >		this.stream = this.options.stream;</span>
-<span class="cstat-no" title="statement not covered" >		this.id = null;</span>
-<span class="cstat-no" title="statement not covered" >		this.frameIndex = 0;</span>
-<span class="cstat-no" title="statement not covered" >		this.enabled = typeof this.options.enabled === 'boolean' ? this.options.enabled : ((this.stream &amp;&amp; this.stream.isTTY) &amp;&amp; !process.env.CI);</span>
+<span class="cstat-no" title="statement not covered">		this.text = this.options.text;</span>
+<span class="cstat-no" title="statement not covered">		this.color = this.options.color;</span>
+<span class="cstat-no" title="statement not covered">		this.interval = this.options.interval || this.spinner.interval || 100;</span>
+<span class="cstat-no" title="statement not covered">		this.stream = this.options.stream;</span>
+<span class="cstat-no" title="statement not covered">		this.id = null;</span>
+<span class="cstat-no" title="statement not covered">		this.frameIndex = 0;</span>
+<span class="cstat-no" title="statement not covered">		this.enabled = typeof this.options.enabled === 'boolean' ? this.options.enabled : ((this.stream &amp;&amp; this.stream.isTTY) &amp;&amp; !process.env.CI);</span>
 	}
-	frame<span class="fstat-no" title="function not covered" >() {</span>
-<span class="cstat-no" title="statement not covered" >		const frames = this.spinner.frames;</span>
-<span class="cstat-no" title="statement not covered" >		let frame = frames[this.frameIndex];</span>
+	frame<span class="fstat-no" title="function not covered">() {</span>
+<span class="cstat-no" title="statement not covered">		const frames = this.spinner.frames;</span>
+<span class="cstat-no" title="statement not covered">		let frame = frames[this.frameIndex];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (this.color) {</span>
-<span class="cstat-no" title="statement not covered" >			frame = chalk[this.color](frame);</span>
+<span class="cstat-no" title="statement not covered">		if (this.color) {</span>
+<span class="cstat-no" title="statement not covered">			frame = chalk[this.color](frame);</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		this.frameIndex = ++this.frameIndex % frames.length;</span>
+<span class="cstat-no" title="statement not covered">		this.frameIndex = ++this.frameIndex % frames.length;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		return frame + ' ' + this.text;</span>
+<span class="cstat-no" title="statement not covered">		return frame + ' ' + this.text;</span>
 	}
-	clear<span class="fstat-no" title="function not covered" >() {</span>
-<span class="cstat-no" title="statement not covered" >		if (!this.enabled) {</span>
-<span class="cstat-no" title="statement not covered" >			return this;</span>
+	clear<span class="fstat-no" title="function not covered">() {</span>
+<span class="cstat-no" title="statement not covered">		if (!this.enabled) {</span>
+<span class="cstat-no" title="statement not covered">			return this;</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		this.stream.clearLine();</span>
-<span class="cstat-no" title="statement not covered" >		this.stream.cursorTo(0);</span>
+<span class="cstat-no" title="statement not covered">		this.stream.clearLine();</span>
+<span class="cstat-no" title="statement not covered">		this.stream.cursorTo(0);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		return this;</span>
+<span class="cstat-no" title="statement not covered">		return this;</span>
 	}
-	render<span class="fstat-no" title="function not covered" >() {</span>
-<span class="cstat-no" title="statement not covered" >		this.clear();</span>
-<span class="cstat-no" title="statement not covered" >		this.stream.write(this.frame());</span>
+	render<span class="fstat-no" title="function not covered">() {</span>
+<span class="cstat-no" title="statement not covered">		this.clear();</span>
+<span class="cstat-no" title="statement not covered">		this.stream.write(this.frame());</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		return this;</span>
+<span class="cstat-no" title="statement not covered">		return this;</span>
 	}
-	start<span class="fstat-no" title="function not covered" >() {</span>
-<span class="cstat-no" title="statement not covered" >		if (!this.enabled || this.id) {</span>
-<span class="cstat-no" title="statement not covered" >			return this;</span>
+	start<span class="fstat-no" title="function not covered">() {</span>
+<span class="cstat-no" title="statement not covered">		if (!this.enabled || this.id) {</span>
+<span class="cstat-no" title="statement not covered">			return this;</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		cliCursor.hide(this.stream);</span>
-<span class="cstat-no" title="statement not covered" >		this.render();</span>
-<span class="cstat-no" title="statement not covered" >		this.id = setInterval(this.render.bind(this), this.interval);</span>
+<span class="cstat-no" title="statement not covered">		cliCursor.hide(this.stream);</span>
+<span class="cstat-no" title="statement not covered">		this.render();</span>
+<span class="cstat-no" title="statement not covered">		this.id = setInterval(this.render.bind(this), this.interval);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		return this;</span>
+<span class="cstat-no" title="statement not covered">		return this;</span>
 	}
-	stop<span class="fstat-no" title="function not covered" >() {</span>
-<span class="cstat-no" title="statement not covered" >		if (!this.enabled) {</span>
-<span class="cstat-no" title="statement not covered" >			return this;</span>
+	stop<span class="fstat-no" title="function not covered">() {</span>
+<span class="cstat-no" title="statement not covered">		if (!this.enabled) {</span>
+<span class="cstat-no" title="statement not covered">			return this;</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		clearInterval(this.id);</span>
-<span class="cstat-no" title="statement not covered" >		this.id = null;</span>
-<span class="cstat-no" title="statement not covered" >		this.frameIndex = 0;</span>
-<span class="cstat-no" title="statement not covered" >		this.clear();</span>
-<span class="cstat-no" title="statement not covered" >		cliCursor.show(this.stream);</span>
+<span class="cstat-no" title="statement not covered">		clearInterval(this.id);</span>
+<span class="cstat-no" title="statement not covered">		this.id = null;</span>
+<span class="cstat-no" title="statement not covered">		this.frameIndex = 0;</span>
+<span class="cstat-no" title="statement not covered">		this.clear();</span>
+<span class="cstat-no" title="statement not covered">		cliCursor.show(this.stream);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		return this;</span>
+<span class="cstat-no" title="statement not covered">		return this;</span>
 	}
-	succeed<span class="fstat-no" title="function not covered" >(text) {</span>
-<span class="cstat-no" title="statement not covered" >		return this.stopAndPersist({symbol: logSymbols.success, text});</span>
+	succeed<span class="fstat-no" title="function not covered">(text) {</span>
+<span class="cstat-no" title="statement not covered">		return this.stopAndPersist({symbol: logSymbols.success, text});</span>
 	}
-	fail<span class="fstat-no" title="function not covered" >(text) {</span>
-<span class="cstat-no" title="statement not covered" >		return this.stopAndPersist({symbol: logSymbols.error, text});</span>
+	fail<span class="fstat-no" title="function not covered">(text) {</span>
+<span class="cstat-no" title="statement not covered">		return this.stopAndPersist({symbol: logSymbols.error, text});</span>
 	}
-	warn<span class="fstat-no" title="function not covered" >(text) {</span>
-<span class="cstat-no" title="statement not covered" >		return this.stopAndPersist({symbol: logSymbols.warning, text});</span>
+	warn<span class="fstat-no" title="function not covered">(text) {</span>
+<span class="cstat-no" title="statement not covered">		return this.stopAndPersist({symbol: logSymbols.warning, text});</span>
 	}
-	info<span class="fstat-no" title="function not covered" >(text) {</span>
-<span class="cstat-no" title="statement not covered" >		return this.stopAndPersist({symbol: logSymbols.info, text});</span>
+	info<span class="fstat-no" title="function not covered">(text) {</span>
+<span class="cstat-no" title="statement not covered">		return this.stopAndPersist({symbol: logSymbols.info, text});</span>
 	}
-	stopAndPersist<span class="fstat-no" title="function not covered" >(options) {</span>
+	stopAndPersist<span class="fstat-no" title="function not covered">(options) {</span>
 		// Legacy argument
 		// TODO: Deprecate sometime in the future
-<span class="cstat-no" title="statement not covered" >		if (typeof options === 'string') {</span>
-<span class="cstat-no" title="statement not covered" >			options = {</span>
+<span class="cstat-no" title="statement not covered">		if (typeof options === 'string') {</span>
+<span class="cstat-no" title="statement not covered">			options = {</span>
 				symbol: options
 			};
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		options = options || {};</span>
+<span class="cstat-no" title="statement not covered">		options = options || {};</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		this.stop();</span>
-<span class="cstat-no" title="statement not covered" >		this.stream.write(`${options.symbol || ' '} ${options.text || this.text}\n`);</span>
+<span class="cstat-no" title="statement not covered">		this.stop();</span>
+<span class="cstat-no" title="statement not covered">		this.stream.write(`${options.symbol || ' '} ${options.text || this.text}\n`);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		return this;</span>
+<span class="cstat-no" title="statement not covered">		return this;</span>
 	}
 }
 &nbsp;
-module.exports = <span class="fstat-no" title="function not covered" >function (opts) {</span>
-<span class="cstat-no" title="statement not covered" >	return new Ora(opts);</span>
+module.exports = <span class="fstat-no" title="function not covered">function (opts) {</span>
+<span class="cstat-no" title="statement not covered">	return new Ora(opts);</span>
 };
 &nbsp;
 module.exports.promise = (action, options) =&gt; {
-<span class="cstat-no" title="statement not covered" >	if (typeof action.then !== 'function') {</span>
-<span class="cstat-no" title="statement not covered" >		throw new TypeError('Parameter `action` must be a Promise');</span>
+<span class="cstat-no" title="statement not covered">	if (typeof action.then !== 'function') {</span>
+<span class="cstat-no" title="statement not covered">		throw new TypeError('Parameter `action` must be a Promise');</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	const spinner = new Ora(options);</span>
-<span class="cstat-no" title="statement not covered" >	spinner.start();</span>
+<span class="cstat-no" title="statement not covered">	const spinner = new Ora(options);</span>
+<span class="cstat-no" title="statement not covered">	spinner.start();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	action.then(</span>
+<span class="cstat-no" title="statement not covered">	action.then(</span>
 		() =&gt; {
-<span class="cstat-no" title="statement not covered" >			spinner.succeed();</span>
+<span class="cstat-no" title="statement not covered">			spinner.succeed();</span>
 		},
 		() =&gt; {
-<span class="cstat-no" title="statement not covered" >			spinner.fail();</span>
+<span class="cstat-no" title="statement not covered">			spinner.fail();</span>
 		}
 	);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	return spinner;</span>
+<span class="cstat-no" title="statement not covered">	return spinner;</span>
 };
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 12:48:21 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 16:41:28 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
