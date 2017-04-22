@@ -1,4 +1,7 @@
-# test coverage for  [ora (v1.2.0)](https://github.com/sindresorhus/ora#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-ora.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-ora) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-ora.svg)](https://travis-ci.org/npmtest/node-npmtest-ora)
+# npmtest-ora
+
+#### basic test coverage for  [ora (v1.2.0)](https://github.com/sindresorhus/ora#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-ora.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-ora) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-ora.svg)](https://travis-ci.org/npmtest/node-npmtest-ora)
+
 #### Elegant terminal spinner
 
 [![NPM](https://nodei.co/npm/ora.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/ora)
@@ -96,7 +99,8 @@
     "scripts": {
         "test": "xo && ava"
     },
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "bin": {}
 }
 ```
 
